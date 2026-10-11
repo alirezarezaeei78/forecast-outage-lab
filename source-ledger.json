@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+    "checked": "2026-10-11",
+    "claim": "Public aggregate hourly rental counts in 2011–2012; CC BY 4.0; dataset citation and target components.",
+    "section": "Dataset information; additional variable information; License",
+    "caveat": "Web page displays 17,389 instances; downloaded hour.csv has 17,379 verified rows. Grid has 165 omitted hourly timestamps."
+  },
+  {
+    "url": "https://scikit-learn.org/stable/auto_examples/applications/plot_time_series_lagged_features.html",
+    "checked": "2026-10-11",
+    "version": "stable 1.9.1 viewed; execution 1.4.2",
+    "claim": "Lagged/shifted past-demand features and chronological evaluation are established forecasting methods.",
+    "section": "Generating lagged features; Proper next hour forecasting evaluation",
+    "caveat": "Their data transform/evaluation/results are not our experiment; no copied benchmark claims."
+  },
+  {
+    "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html",
+    "checked": "2026-10-11",
+    "version": "stable 1.9.1 viewed; execution 1.4.2",
+    "claim": "HGB supports NaN values; route learned from training; absence of training NaNs uses larger child. Poisson loss log link and parameters documented.",
+    "section": "Missing-value handling; loss; early_stopping",
+    "caveat": "NaN acceptance does not guarantee forecasting robustness; early stopping disabled in our fixed-budget protocol."
+  },
+  {
+    "url": "local:results/results.json",
+    "checked": "2026-10-11",
+    "claim": "All quantitative outcomes in the repository and LinkedIn are from the actual local run, not the sources above.",
+    "section": "pooled_metrics; folds; checks; environment",
+    "caveat": "Fixed historical public quarter; simulated rolling delays; one mask draw per fold; established methods, not claimed novel algorithm."
+  }
+]

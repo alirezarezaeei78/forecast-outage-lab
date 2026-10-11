@@ -1,0 +1,23 @@
+{
+  "run_date": "2026-10-11",
+  "code_data_policy": "Fresh authored implementation; public aggregate UCI data with attribution; no private code/data. Raw source archive excluded; data hashes in results.json.",
+  "sha256": {
+    ".gitignore": "bd98509833c7776aa0f5c1a97c24d152511ad436bb9ac10dd562151c2e1f0d18",
+    ".github/workflows/checks.yml": "5227788c7411b0e9db94629ead6bd6169ca9da7828c1eb84db6f41f1c8870e26",
+    "experiment.py": "853e4909127dd2e22205ed87330640f1c35adbdd9231572c60323ccc31e1eedf",
+    "requirements.txt": "02360f48c6cd1bd94161d9aedc4502081cc088e9e1df1c16f88037ee3599c760",
+    "README.md": "a4d0a0df883cc678b629366cb9ede7eb09efeab0620d450d1878b8ed22163102",
+    "PROTOCOL.md": "5bbfcbd8bbc5a5dbafa2ab62da9a8245a9724724079a6e54d9d0b5492323a07a",
+    "LICENSE": "832589631ca1d4de0808bef2097ac096987a5a99cafc71b7aa30755c62c862ef",
+    "source-ledger.json": "d7f5b02b2ee26f459a590a341da5d8fdc0c61aa788cc02f0471a9dc90787b0a4",
+    "figure-alt-text.txt": "4dd8d0fbc89db5ee0bb94d843a59ee11ab197e90963414982b4f95cd20800b26",
+    "run.log": "f16038e1287e1cf56ab5ad81ae572848a5a9ed0deef714c320a375aa333dea71",
+    "results/results.json": "619f992d9223fa6b2990cfdaaf4d4c703aa41434e0e79d2462b3ee8b0505a9d0",
+    "results/metrics.csv": "5857dcf486fe175472cc321a6355a2e1307a9057f7d213e95148d0e6517baf85",
+    "results/fold-metrics.csv": "79ac5130b4a28dbdcc53cc9b9254b81bbbed45a11efe8a57263e685a1f3d2ee3",
+    "results/predictions.csv": "0695d32b6d75231478cdb849c4305490af836fb989db3ea3ddb8817f13ab493b",
+    "results/outage-mae.png": "0c40231a5f43ede6e6e339fe2d39b62906f15c8643e0bf60e790d4bd1dd9b66a",
+    "results/outage-mae.svg": "84af3a85d7c40f77500bfe27a2995555399c0fffc8bd9fe0a7be614084da0a0f",
+    ".gitattributes": "c089985639038cc07dc37c07a8d0d543df7ddf9b1873a948000494a6e230530d"
+  }
+}

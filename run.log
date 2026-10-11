@@ -1,0 +1,36 @@
+D:\anaconda3\Lib\site-packages\joblib\externals\loky\backend\context.py:136: UserWarning: Could not find the number of physical cores for the following reason:
+[WinError 2] The system cannot find the file specified
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+  File "D:\anaconda3\Lib\site-packages\joblib\externals\loky\backend\context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+               ^^^^^^^^^^^^^^^
+  File "D:\anaconda3\Lib\subprocess.py", line 550, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\Lib\subprocess.py", line 1028, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "D:\anaconda3\Lib\subprocess.py", line 1540, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Completed fold 1: train=12842, test=744
+Completed fold 2: train=13586, test=744
+Completed fold 3: train=14330, test=720
+ outage_hours             model    n        mae       rmse
+            0      calendar_hgb 2208  51.456577  82.080500
+            0      ordinary_hgb 2208  31.783045  50.497942
+            0  outage_aware_hgb 2208  37.947005  59.741693
+            0 seasonal_fallback 2208  55.997736  97.891963
+            1      calendar_hgb 2208  51.456577  82.080500
+            1      ordinary_hgb 2208 260.656079 345.201833
+            1  outage_aware_hgb 2208  48.929533  78.971807
+            1 seasonal_fallback 2208  55.997736  97.891963
+            3      calendar_hgb 2208  51.456577  82.080500
+            3      ordinary_hgb 2208 259.947165 343.667510
+            3  outage_aware_hgb 2208  51.540760  83.367464
+            3 seasonal_fallback 2208  55.997736  97.891963
+            6      calendar_hgb 2208  51.456577  82.080500
+            6      ordinary_hgb 2208 260.114711 343.777419
+            6  outage_aware_hgb 2208  51.512445  83.306199
+            6 seasonal_fallback 2208  55.997736  97.891963
+Checks passed: 16

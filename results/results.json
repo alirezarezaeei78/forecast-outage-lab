@@ -1,0 +1,254 @@
+{
+  "executed_at": "2026-10-11T11:54:43.063664+00:00",
+  "data": {
+    "url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+    "archive_sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+    "hour_csv_sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f",
+    "csv_rows": 17379,
+    "hourly_grid_rows": 17544,
+    "missing_hourly_timestamps": 165,
+    "source_start": "2011-01-01 00:00:00",
+    "source_end": "2012-12-31 23:00:00",
+    "license": "CC BY 4.0",
+    "doi": "https://doi.org/10.24432/C5W894",
+    "citation": "Fanaee-T, H. (2013). Bike Sharing. UCI Machine Learning Repository."
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-06-30 23:00:00",
+      "train_rows": 12842,
+      "test_start": "2012-07-01",
+      "test_end_exclusive": "2012-08-01",
+      "test_rows": 744,
+      "masking_seed": 42,
+      "training_outage_counts": {
+        "0": 6431,
+        "1": 2199,
+        "3": 2119,
+        "6": 2093
+      },
+      "trees_per_model": 150
+    },
+    {
+      "fold": 2,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-07-31 23:00:00",
+      "train_rows": 13586,
+      "test_start": "2012-08-01",
+      "test_end_exclusive": "2012-09-01",
+      "test_rows": 744,
+      "masking_seed": 43,
+      "training_outage_counts": {
+        "0": 6727,
+        "1": 2320,
+        "3": 2234,
+        "6": 2305
+      },
+      "trees_per_model": 150
+    },
+    {
+      "fold": 3,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-08-31 23:00:00",
+      "train_rows": 14330,
+      "test_start": "2012-09-01",
+      "test_end_exclusive": "2012-10-01",
+      "test_rows": 720,
+      "masking_seed": 44,
+      "training_outage_counts": {
+        "0": 7219,
+        "1": 2352,
+        "3": 2379,
+        "6": 2380
+      },
+      "trees_per_model": 150
+    }
+  ],
+  "horizon_hours": 1,
+  "outages": [
+    0,
+    1,
+    3,
+    6
+  ],
+  "model_config": {
+    "loss": "poisson",
+    "max_iter": 150,
+    "max_leaf_nodes": 15,
+    "learning_rate": 0.08,
+    "min_samples_leaf": 30,
+    "l2_regularization": 1.0,
+    "early_stopping": false,
+    "categorical_features": null,
+    "random_state": 42
+  },
+  "training_mask_probabilities": {
+    "0": 0.5,
+    "1": 0.16666666666666666,
+    "3": 0.16666666666666666,
+    "6": 0.16666666666666666
+  },
+  "no_test_tuning": true,
+  "refit_at_month_start": true,
+  "weather_features_used": false,
+  "target_definition": "cnt (observed hourly total rentals)",
+  "outage_definition": "At EACH rolling forecast origin hide the preceding k hourly reports; older reports recovered. Not one unrecovered quarter-long outage.",
+  "environment": {
+    "python": "3.12.9",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scikit-learn": "1.4.2",
+    "matplotlib": "3.10.0",
+    "threadpoolctl": "2.2.0",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+    "threads": 2
+  },
+  "command": "python experiment.py --output results",
+  "checks": {
+    "passed": 16,
+    "checks": [
+      "0h masking, causal lags, rolling mean and availability",
+      "1h masking, causal lags, rolling mean and availability",
+      "3h masking, causal lags, rolling mean and availability",
+      "6h masking, causal lags, rolling mean and availability",
+      "Current/future target perturbation cannot change present/past features",
+      "Hidden reports cannot affect masked features",
+      "Naturally missing hours are not converted to zero",
+      "Training masks deterministic for fixed seed",
+      "Invalid outage arguments rejected",
+      "Irregular hourly grid rejected",
+      "No history yields NaN, not an invented count",
+      "Fallback precedence and train-only median",
+      "Strict chronological train/test ordering in every fold",
+      "Finite nonnegative forecasts for all models/scenarios",
+      "Identical target rows for all model/scenario comparisons",
+      "Nonoverlapping test timestamps and unique predictions"
+    ]
+  },
+  "pooled_metrics": [
+    {
+      "outage_hours": 0,
+      "model": "calendar_hgb",
+      "n": 2208,
+      "mae": 51.45657745193463,
+      "rmse": 82.08050028593667
+    },
+    {
+      "outage_hours": 0,
+      "model": "ordinary_hgb",
+      "n": 2208,
+      "mae": 31.783044624786747,
+      "rmse": 50.497942444724096
+    },
+    {
+      "outage_hours": 0,
+      "model": "outage_aware_hgb",
+      "n": 2208,
+      "mae": 37.94700450521587,
+      "rmse": 59.74169303133121
+    },
+    {
+      "outage_hours": 0,
+      "model": "seasonal_fallback",
+      "n": 2208,
+      "mae": 55.997735507246375,
+      "rmse": 97.89196342715366
+    },
+    {
+      "outage_hours": 1,
+      "model": "calendar_hgb",
+      "n": 2208,
+      "mae": 51.45657745193463,
+      "rmse": 82.08050028593667
+    },
+    {
+      "outage_hours": 1,
+      "model": "ordinary_hgb",
+      "n": 2208,
+      "mae": 260.6560794209229,
+      "rmse": 345.2018326068803
+    },
+    {
+      "outage_hours": 1,
+      "model": "outage_aware_hgb",
+      "n": 2208,
+      "mae": 48.92953306636586,
+      "rmse": 78.97180720831551
+    },
+    {
+      "outage_hours": 1,
+      "model": "seasonal_fallback",
+      "n": 2208,
+      "mae": 55.997735507246375,
+      "rmse": 97.89196342715366
+    },
+    {
+      "outage_hours": 3,
+      "model": "calendar_hgb",
+      "n": 2208,
+      "mae": 51.45657745193463,
+      "rmse": 82.08050028593667
+    },
+    {
+      "outage_hours": 3,
+      "model": "ordinary_hgb",
+      "n": 2208,
+      "mae": 259.94716535735796,
+      "rmse": 343.66751032807736
+    },
+    {
+      "outage_hours": 3,
+      "model": "outage_aware_hgb",
+      "n": 2208,
+      "mae": 51.54075976913478,
+      "rmse": 83.36746379991307
+    },
+    {
+      "outage_hours": 3,
+      "model": "seasonal_fallback",
+      "n": 2208,
+      "mae": 55.997735507246375,
+      "rmse": 97.89196342715366
+    },
+    {
+      "outage_hours": 6,
+      "model": "calendar_hgb",
+      "n": 2208,
+      "mae": 51.45657745193463,
+      "rmse": 82.08050028593667
+    },
+    {
+      "outage_hours": 6,
+      "model": "ordinary_hgb",
+      "n": 2208,
+      "mae": 260.1147109536189,
+      "rmse": 343.7774189024096
+    },
+    {
+      "outage_hours": 6,
+      "model": "outage_aware_hgb",
+      "n": 2208,
+      "mae": 51.51244507143007,
+      "rmse": 83.30619854079563
+    },
+    {
+      "outage_hours": 6,
+      "model": "seasonal_fallback",
+      "n": 2208,
+      "mae": 55.997735507246375,
+      "rmse": 97.89196342715366
+    }
+  ],
+  "limitations": [
+    "One historical city and one quarter; not a production deployment or SOTA benchmark.",
+    "One fixed masking draw per fold (seeds 42/43/44); no inferential confidence intervals.",
+    "Features may use earlier TEST-period counts only when available at that rolling forecast origin.",
+    "No models/parameters selected on held-out results; first 168 hours excluded from training.",
+    "Original missing targets are not evaluated. Missing past reports remain NaN.",
+    "50% row-wise training masking is a preset stress-test recipe, not an estimated real outage distribution.",
+    "0h means no ADDED outage; natural gaps remain. Outages do not extend to seasonal lags (24/168h)."
+  ]
+}
