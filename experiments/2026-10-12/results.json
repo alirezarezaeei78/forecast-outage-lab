@@ -1,0 +1,115 @@
+{
+  "executed_at": "2026-10-12T15:37:42.052274+00:00",
+  "data": {
+    "url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+    "archive_sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+    "hour_csv_sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f",
+    "csv_rows": 17379,
+    "hourly_grid_rows": 17544,
+    "missing_hourly_timestamps": 165,
+    "source_start": "2011-01-01 00:00:00",
+    "source_end": "2012-12-31 23:00:00",
+    "license": "CC BY 4.0",
+    "doi": "https://doi.org/10.24432/C5W894",
+    "citation": "Fanaee-T, H. (2013). Bike Sharing. UCI Machine Learning Repository."
+  },
+  "source_commit": "4f7902fa147b5f8c40553d14363e45254dc54cce",
+  "source_prediction_sha256": "0695d32b6d75231478cdb849c4305490af836fb989db3ea3ddb8817f13ab493b",
+  "new_model_fits": 0,
+  "benchmark_reuse": "Exploratory; October 11 outcomes already examined",
+  "rule": "Ordinary at zero report age and valid prediction, else calendar-only",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "daily_delay_probabilities": {
+    "0": 0.7,
+    "1": 0.1,
+    "3": 0.1,
+    "6": 0.1
+  },
+  "unique_target_rows": 2208,
+  "overlapping_replays_not_independent_samples": true,
+  "command": "python fallback_policy.py --output experiments/2026-10-12",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "dependencies": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.2",
+      "scikit-learn": "1.4.2",
+      "matplotlib": "3.10.0",
+      "threadpoolctl": "2.2.0"
+    }
+  },
+  "checks": {
+    "passed": 24,
+    "checks": [
+      "0h masking, causal lags, rolling mean and availability",
+      "1h masking, causal lags, rolling mean and availability",
+      "3h masking, causal lags, rolling mean and availability",
+      "6h masking, causal lags, rolling mean and availability",
+      "Current/future target perturbation cannot change present/past features",
+      "Hidden reports cannot affect masked features",
+      "Naturally missing hours are not converted to zero",
+      "Training masks deterministic for fixed seed",
+      "Invalid outage arguments rejected",
+      "Irregular hourly grid rejected",
+      "No history yields NaN, not an invented count",
+      "Fallback precedence and train-only median",
+      "Report-age convention equals declared delay when history is complete",
+      "Natural missing report and no history trigger stale/unknown ages",
+      "Changing current/future target availability cannot alter present/past ages",
+      "Hidden observations cannot change masked report age",
+      "Fresh, stale, unknown and invalid-primary routing preserves fallback values",
+      "Routing leaves caller arrays unchanged",
+      "Bad shapes, ages and fallback numbers rejected",
+      "Invalid delay arguments rejected",
+      "All five schedules deterministic with one delay per day",
+      "Frozen public prediction hash and UCI target identity verified",
+      "Identical 2,208 rows in every schedule/method; no duplicated predictions",
+      "Finite nonnegative outputs; exact repeated routing parity"
+    ]
+  },
+  "mixed_summary": [
+    {
+      "model": "age_gate",
+      "mae": 38.46964853614956,
+      "rmse": 63.11330898744465,
+      "fallback_fraction": 0.29565217391304344
+    },
+    {
+      "model": "calendar_hgb",
+      "mae": 51.45657745193463,
+      "rmse": 82.08050028593667,
+      "fallback_fraction": 0.0
+    },
+    {
+      "model": "ordinary_hgb",
+      "mae": 99.03446295056256,
+      "rmse": 192.27216543630135,
+      "fallback_fraction": 0.0
+    },
+    {
+      "model": "outage_aware_hgb",
+      "mae": 41.9010912204825,
+      "rmse": 67.60670515184535,
+      "fallback_fraction": 0.0
+    },
+    {
+      "model": "seasonal_fallback",
+      "mae": 55.997735507246375,
+      "rmse": 97.89196342715366,
+      "fallback_fraction": 0.0
+    }
+  ],
+  "limitations": [
+    "Same previously exposed city/quarter; not independent validation.",
+    "Synthetic daily delays; not measured real-world outage frequency.",
+    "Report timestamps assumed correct; no >23h delay evaluation.",
+    "Models and original masking draws frozen; no new model fits or uncertainty intervals."
+  ]
+}

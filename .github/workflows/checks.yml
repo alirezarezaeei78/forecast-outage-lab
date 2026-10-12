@@ -13,3 +13,4 @@ jobs:
           cache: pip
       - run: python -m pip install -r requirements.txt
       - run: python experiment.py --check-only
+      - run: python fallback_policy.py --check-only

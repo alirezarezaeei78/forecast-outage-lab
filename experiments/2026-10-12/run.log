@@ -1,0 +1,7 @@
+            model       mae       rmse  fallback_fraction
+         age_gate 38.469649  63.113309           0.295652
+     calendar_hgb 51.456577  82.080500           0.000000
+     ordinary_hgb 99.034463 192.272165           0.000000
+ outage_aware_hgb 41.901091  67.606705           0.000000
+seasonal_fallback 55.997736  97.891963           0.000000
+Checks passed: 24

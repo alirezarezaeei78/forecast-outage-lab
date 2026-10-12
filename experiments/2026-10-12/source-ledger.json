@@ -1,0 +1,39 @@
+[
+  {
+    "url": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+    "checked": "2026-10-12",
+    "section": "Dataset description, citation and License",
+    "claim": "Historical aggregate hourly counts; CC BY 4.0; Fanaee-T 2013",
+    "caveat": "Frozen byte-verified archive; missing hours preserved. Public web instance count differs from CSV."
+  },
+  {
+    "url": "https://scikit-learn.org/1.4/modules/ensemble.html#missing-values-support",
+    "checked": "2026-10-12",
+    "version": "1.4.2",
+    "section": "1.11.1.1.2 Missing values support",
+    "claim": "HGB learns missing-value routing; absent training NaNs map to the larger child",
+    "caveat": "Native support is not a resilience guarantee. No quantitative outcomes copied."
+  },
+  {
+    "url": "https://scikit-learn.org/stable/auto_examples/applications/plot_time_series_lagged_features.html",
+    "checked": "2026-10-12",
+    "version": "stable 1.9.1; archived models used 1.4.2",
+    "section": "Lag generation and proper next-hour forecasting evaluation",
+    "claim": "Shifted past features and chronological evaluation are established practice",
+    "caveat": "Their split and results differ from this executed replay."
+  },
+  {
+    "url": "https://github.com/alirezarezaeei78/forecast-outage-lab/commit/4f7902fa147b5f8c40553d14363e45254dc54cce",
+    "checked": "2026-10-12",
+    "section": "results/predictions.csv and results/results.json",
+    "claim": "Frozen input forecasts from October 11; predictions hash verified",
+    "caveat": "Previously exposed benchmark; follow-up exploratory, not independent validation."
+  },
+  {
+    "url": "local:experiments/2026-10-12/results.json",
+    "checked": "2026-10-12",
+    "section": "checks, mixed_summary, environment and limitations",
+    "claim": "New actual routing/mixed-delay results; five preset seeds and zero new model fits",
+    "caveat": "Overlapping historical rows and artificial daily delays; no statistical significance or runtime claim."
+  }
+]

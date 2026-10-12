@@ -4,6 +4,8 @@ A reproducible reporting-delay stress test for next-hour demand forecasting. It 
 
 This repository contains a new executed experiment and a reusable audit tool, using established algorithms. It does not claim a novel forecasting algorithm, state-of-the-art performance or production validation.
 
+**New tool, 12 October:** [reporting-age fallback and mixed-delay replay](experiments/2026-10-12/README.md). A tested reusable Python router switches forecasts when demand reports are stale. Mean MAE across five synthetic delay schedules was 38.5 versus 99.0 for always ordinary and 41.9 for always outage-aware; the one-hour constant-delay case favored outage-aware. This reuses the already examined benchmark and is labelled exploratory. [Protocol, code, all results and 24 checks](experiments/2026-10-12/README.md); no hosted app or new algorithm is claimed.
+
 ![Measured MAE under simulated reporting delays](results/outage-mae.png)
 
 ## Findings from the recorded run
