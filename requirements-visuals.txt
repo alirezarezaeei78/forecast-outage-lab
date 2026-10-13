@@ -1,0 +1,2 @@
+# Optional silent workflow MP4 renderer; core experiment needs requirements.txt only.
+imageio-ffmpeg==0.6.0

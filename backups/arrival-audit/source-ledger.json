@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://docs.feast.dev/getting-started/concepts/point-in-time-joins",
+    "checked": "2026-10-13",
+    "section": "Retrieving features as of event time; created timestamp filtering",
+    "claim": "Availability/creation timestamp can be constrained in point-in-time retrieval",
+    "caveat": "No Feast performance reproduction; this authored reference selects one report stream and uses synthetic inputs."
+  },
+  {
+    "url": "local:backups/arrival-audit/results.json",
+    "checked": "2026-10-13",
+    "section": "120-origin synthetic audit and 9 checks",
+    "claim": "102 naive unavailable selections versus 0 arrival-aware, from the executed run",
+    "caveat": "Synthetic counts/delays, no models or business outcome claims; report clocks assumed correct."
+  }
+]

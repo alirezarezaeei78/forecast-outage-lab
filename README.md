@@ -6,6 +6,8 @@ This repository contains a new executed experiment and a reusable audit tool, us
 
 **New tool, 12 October:** [reporting-age fallback and mixed-delay replay](experiments/2026-10-12/README.md). A tested reusable Python router switches forecasts when demand reports are stale. Mean MAE across five synthetic delay schedules was 38.5 versus 99.0 for always ordinary and 41.9 for always outage-aware; the one-hour constant-delay case favored outage-aware. This reuses the already examined benchmark and is labelled exploratory. [Protocol, code, all results and 24 checks](experiments/2026-10-12/README.md); no hosted app or new algorithm is claimed.
 
+**New experiment, 13 October:** [configurable masking sweep](experiments/2026-10-13/README.md), with five preset training recipes, 18 actual fits, 24 checks, complete predictions and a 20-second technical workflow video. More masking reduced delayed-input errors in this run while increasing undelayed errors. All variants and baselines retained; previously exposed benchmark, explicitly exploratory. Use requirements-sweep.txt for the repaired thread-control environment.
+
 ![Measured MAE under simulated reporting delays](results/outage-mae.png)
 
 ## Findings from the recorded run
@@ -32,12 +34,12 @@ Recorded environment: Python 3.12.9, NumPy 1.26.4, pandas 2.2.2, scikit-learn 1.
 ```bash
 python -m venv .venv
 # Activate the environment using your operating system's normal command.
-python -m pip install -r requirements.txt
+python -m pip install -r requirements-sweep.txt
 python experiment.py --check-only
 python experiment.py --output results
 ```
 
-The full run downloads the public UCI archive into ignored `data/`, builds an hourly grid, fits nine small models and writes predictions, metrics, an editable SVG and a PNG. Inspect the newly written data hashes against the recorded run. Network access is needed on the first run; `--check-only` is offline after dependencies are installed. CPU/library differences may produce small floating-point differences.
+The full run downloads the public UCI archive into ignored `data/`, builds an hourly grid, fits nine small models and writes predictions, metrics, an editable SVG and a PNG. Inspect the newly written data hashes against the recorded run. Network access is needed on the first run; `--check-only` is offline after dependencies are installed. CPU/library differences may produce small floating-point differences. The current runner uses requirements-sweep.txt with threadpoolctl 3.6.0 to repair native-library introspection; requirements.txt preserves the original recorded 2.2.0 pin. The October 13 ordinary/50% fits match archived predictions within 5.7e-14; original results and metadata have not been rewritten.
 
 For a custom run, supply another output directory and optionally `--cache PATH`. The functions `features`, `mask_training` and `seasonal_fallback` can also be imported into a separate evaluation. `features` requires a complete hourly grid and supports reporting delays from 0 to 23 hours; the recorded benchmark uses 0/1/3/6. Other horizons, outage lengths and tasks require a changed protocol and fresh results.
 

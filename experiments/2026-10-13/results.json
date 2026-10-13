@@ -1,0 +1,621 @@
+{
+  "executed_at": "2026-10-13T13:51:46.038916+00:00",
+  "data": {
+    "url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+    "archive_sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+    "hour_csv_sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f",
+    "csv_rows": 17379,
+    "hourly_grid_rows": 17544,
+    "missing_hourly_timestamps": 165,
+    "source_start": "2011-01-01 00:00:00",
+    "source_end": "2012-12-31 23:00:00",
+    "license": "CC BY 4.0",
+    "doi": "https://doi.org/10.24432/C5W894",
+    "citation": "Fanaee-T, H. (2013). Bike Sharing. UCI Machine Learning Repository."
+  },
+  "model_config": {
+    "loss": "poisson",
+    "max_iter": 150,
+    "max_leaf_nodes": 15,
+    "learning_rate": 0.08,
+    "min_samples_leaf": 30,
+    "l2_regularization": 1.0,
+    "early_stopping": false,
+    "categorical_features": null,
+    "random_state": 42
+  },
+  "mask_probabilities": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "mask_seeds_per_fold": [
+    42,
+    43,
+    44
+  ],
+  "fits": 18,
+  "horizon_hours": 1,
+  "outages": [
+    0,
+    1,
+    3,
+    6
+  ],
+  "held_out_rows": 2208,
+  "benchmark_reuse": "Exploratory; same already examined July\u2013September 2012 quarter",
+  "no_test_based_recipe_selection": true,
+  "training_rows_not_augmented": true,
+  "fold_details": [
+    {
+      "fold": 1,
+      "mask_probability": 0.0,
+      "mask_seed": 42,
+      "train_rows": 12842,
+      "test_rows": 744,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-06-30 23:00:00",
+      "test_start": "2012-07-01",
+      "test_end_exclusive": "2012-08-01",
+      "mask_counts": {
+        "0": 12842,
+        "1": 0,
+        "3": 0,
+        "6": 0
+      },
+      "actual_mask_fraction": 0.0,
+      "iterations": 150
+    },
+    {
+      "fold": 1,
+      "mask_probability": 0.25,
+      "mask_seed": 42,
+      "train_rows": 12842,
+      "test_rows": 744,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-06-30 23:00:00",
+      "test_start": "2012-07-01",
+      "test_end_exclusive": "2012-08-01",
+      "mask_counts": {
+        "0": 9713,
+        "1": 1036,
+        "3": 1042,
+        "6": 1051
+      },
+      "actual_mask_fraction": 0.2436536365052172,
+      "iterations": 150
+    },
+    {
+      "fold": 1,
+      "mask_probability": 0.5,
+      "mask_seed": 42,
+      "train_rows": 12842,
+      "test_rows": 744,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-06-30 23:00:00",
+      "test_start": "2012-07-01",
+      "test_end_exclusive": "2012-08-01",
+      "mask_counts": {
+        "0": 6431,
+        "1": 2199,
+        "3": 2119,
+        "6": 2093
+      },
+      "actual_mask_fraction": 0.4992213050926647,
+      "iterations": 150
+    },
+    {
+      "fold": 1,
+      "mask_probability": 0.75,
+      "mask_seed": 42,
+      "train_rows": 12842,
+      "test_rows": 744,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-06-30 23:00:00",
+      "test_start": "2012-07-01",
+      "test_end_exclusive": "2012-08-01",
+      "mask_counts": {
+        "0": 3271,
+        "1": 3160,
+        "3": 3282,
+        "6": 3129
+      },
+      "actual_mask_fraction": 0.7452888958106214,
+      "iterations": 150
+    },
+    {
+      "fold": 1,
+      "mask_probability": 1.0,
+      "mask_seed": 42,
+      "train_rows": 12842,
+      "test_rows": 744,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-06-30 23:00:00",
+      "test_start": "2012-07-01",
+      "test_end_exclusive": "2012-08-01",
+      "mask_counts": {
+        "0": 0,
+        "1": 4336,
+        "3": 4294,
+        "6": 4212
+      },
+      "actual_mask_fraction": 1.0,
+      "iterations": 150
+    },
+    {
+      "fold": 2,
+      "mask_probability": 0.0,
+      "mask_seed": 43,
+      "train_rows": 13586,
+      "test_rows": 744,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-07-31 23:00:00",
+      "test_start": "2012-08-01",
+      "test_end_exclusive": "2012-09-01",
+      "mask_counts": {
+        "0": 13586,
+        "1": 0,
+        "3": 0,
+        "6": 0
+      },
+      "actual_mask_fraction": 0.0,
+      "iterations": 150
+    },
+    {
+      "fold": 2,
+      "mask_probability": 0.25,
+      "mask_seed": 43,
+      "train_rows": 13586,
+      "test_rows": 744,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-07-31 23:00:00",
+      "test_start": "2012-08-01",
+      "test_end_exclusive": "2012-09-01",
+      "mask_counts": {
+        "0": 10164,
+        "1": 1117,
+        "3": 1152,
+        "6": 1153
+      },
+      "actual_mask_fraction": 0.25187693213602236,
+      "iterations": 150
+    },
+    {
+      "fold": 2,
+      "mask_probability": 0.5,
+      "mask_seed": 43,
+      "train_rows": 13586,
+      "test_rows": 744,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-07-31 23:00:00",
+      "test_start": "2012-08-01",
+      "test_end_exclusive": "2012-09-01",
+      "mask_counts": {
+        "0": 6727,
+        "1": 2320,
+        "3": 2234,
+        "6": 2305
+      },
+      "actual_mask_fraction": 0.5048579419991167,
+      "iterations": 150
+    },
+    {
+      "fold": 2,
+      "mask_probability": 0.75,
+      "mask_seed": 43,
+      "train_rows": 13586,
+      "test_rows": 744,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-07-31 23:00:00",
+      "test_start": "2012-08-01",
+      "test_end_exclusive": "2012-09-01",
+      "mask_counts": {
+        "0": 3397,
+        "1": 3330,
+        "3": 3437,
+        "6": 3422
+      },
+      "actual_mask_fraction": 0.7499631974090977,
+      "iterations": 150
+    },
+    {
+      "fold": 2,
+      "mask_probability": 1.0,
+      "mask_seed": 43,
+      "train_rows": 13586,
+      "test_rows": 744,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-07-31 23:00:00",
+      "test_start": "2012-08-01",
+      "test_end_exclusive": "2012-09-01",
+      "mask_counts": {
+        "0": 0,
+        "1": 4468,
+        "3": 4579,
+        "6": 4539
+      },
+      "actual_mask_fraction": 1.0,
+      "iterations": 150
+    },
+    {
+      "fold": 3,
+      "mask_probability": 0.0,
+      "mask_seed": 44,
+      "train_rows": 14330,
+      "test_rows": 720,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-08-31 23:00:00",
+      "test_start": "2012-09-01",
+      "test_end_exclusive": "2012-10-01",
+      "mask_counts": {
+        "0": 14330,
+        "1": 0,
+        "3": 0,
+        "6": 0
+      },
+      "actual_mask_fraction": 0.0,
+      "iterations": 150
+    },
+    {
+      "fold": 3,
+      "mask_probability": 0.25,
+      "mask_seed": 44,
+      "train_rows": 14330,
+      "test_rows": 720,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-08-31 23:00:00",
+      "test_start": "2012-09-01",
+      "test_end_exclusive": "2012-10-01",
+      "mask_counts": {
+        "0": 10788,
+        "1": 1162,
+        "3": 1200,
+        "6": 1180
+      },
+      "actual_mask_fraction": 0.24717376133984648,
+      "iterations": 150
+    },
+    {
+      "fold": 3,
+      "mask_probability": 0.5,
+      "mask_seed": 44,
+      "train_rows": 14330,
+      "test_rows": 720,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-08-31 23:00:00",
+      "test_start": "2012-09-01",
+      "test_end_exclusive": "2012-10-01",
+      "mask_counts": {
+        "0": 7219,
+        "1": 2352,
+        "3": 2379,
+        "6": 2380
+      },
+      "actual_mask_fraction": 0.49623168178646193,
+      "iterations": 150
+    },
+    {
+      "fold": 3,
+      "mask_probability": 0.75,
+      "mask_seed": 44,
+      "train_rows": 14330,
+      "test_rows": 720,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-08-31 23:00:00",
+      "test_start": "2012-09-01",
+      "test_end_exclusive": "2012-10-01",
+      "mask_counts": {
+        "0": 3623,
+        "1": 3596,
+        "3": 3569,
+        "6": 3542
+      },
+      "actual_mask_fraction": 0.7471737613398465,
+      "iterations": 150
+    },
+    {
+      "fold": 3,
+      "mask_probability": 1.0,
+      "mask_seed": 44,
+      "train_rows": 14330,
+      "test_rows": 720,
+      "train_start": "2011-01-08 00:00:00",
+      "train_end": "2012-08-31 23:00:00",
+      "test_start": "2012-09-01",
+      "test_end_exclusive": "2012-10-01",
+      "mask_counts": {
+        "0": 0,
+        "1": 4847,
+        "3": 4724,
+        "6": 4759
+      },
+      "actual_mask_fraction": 1.0,
+      "iterations": 150
+    }
+  ],
+  "original_forecast_parity": [
+    {
+      "new_model": "mask_000",
+      "archived_model": "ordinary_hgb",
+      "max_abs_prediction_difference": 5.684341886080802e-14
+    },
+    {
+      "new_model": "mask_050",
+      "archived_model": "outage_aware_hgb",
+      "max_abs_prediction_difference": 5.684341886080802e-14
+    }
+  ],
+  "checks": {
+    "passed": 24,
+    "checks": [
+      "0h masking, causal lags, rolling mean and availability",
+      "1h masking, causal lags, rolling mean and availability",
+      "3h masking, causal lags, rolling mean and availability",
+      "6h masking, causal lags, rolling mean and availability",
+      "Current/future target perturbation cannot change present/past features",
+      "Hidden reports cannot affect masked features",
+      "Naturally missing hours are not converted to zero",
+      "Training masks deterministic for fixed seed",
+      "Invalid outage arguments rejected",
+      "Irregular hourly grid rejected",
+      "No history yields NaN, not an invented count",
+      "Fallback precedence and train-only median",
+      "Zero masking exactly retains ordinary features and rows",
+      "Full masking replaces recent dependencies without extra rows",
+      "50 percent recipe exactly matches the original masking API",
+      "All recipes preserve inputs, target values, row order and feature schema; fixed seeds deterministic",
+      "Future target perturbations cannot change training features",
+      "Out-of-range, nonfinite, boolean and nonnumeric probabilities rejected",
+      "Invalid seeds rejected",
+      "Unordered, duplicate and out-of-grid training indices rejected",
+      "Strict train-before-test ordering and unchanged training size in all 18 fits",
+      "Same 2,208 rows per model/delay with no duplicate predictions",
+      "Finite nonnegative forecasts for every recipe and baseline",
+      "Archived ordinary/50 percent target identities aligned; numerical differences recorded"
+    ]
+  },
+  "pooled_metrics": [
+    {
+      "model": "calendar_hgb",
+      "outage_hours": 0,
+      "n": 2208,
+      "mae": 51.45657745193463,
+      "rmse": 82.08050028593667
+    },
+    {
+      "model": "calendar_hgb",
+      "outage_hours": 1,
+      "n": 2208,
+      "mae": 51.45657745193463,
+      "rmse": 82.08050028593667
+    },
+    {
+      "model": "calendar_hgb",
+      "outage_hours": 3,
+      "n": 2208,
+      "mae": 51.45657745193463,
+      "rmse": 82.08050028593667
+    },
+    {
+      "model": "calendar_hgb",
+      "outage_hours": 6,
+      "n": 2208,
+      "mae": 51.45657745193463,
+      "rmse": 82.08050028593667
+    },
+    {
+      "model": "mask_000",
+      "outage_hours": 0,
+      "n": 2208,
+      "mae": 31.783044624786747,
+      "rmse": 50.497942444724096
+    },
+    {
+      "model": "mask_000",
+      "outage_hours": 1,
+      "n": 2208,
+      "mae": 260.6560794209229,
+      "rmse": 345.2018326068803
+    },
+    {
+      "model": "mask_000",
+      "outage_hours": 3,
+      "n": 2208,
+      "mae": 259.94716535735796,
+      "rmse": 343.66751032807736
+    },
+    {
+      "model": "mask_000",
+      "outage_hours": 6,
+      "n": 2208,
+      "mae": 260.1147109536189,
+      "rmse": 343.7774189024096
+    },
+    {
+      "model": "mask_025",
+      "outage_hours": 0,
+      "n": 2208,
+      "mae": 35.288323228070205,
+      "rmse": 55.61855013183631
+    },
+    {
+      "model": "mask_025",
+      "outage_hours": 1,
+      "n": 2208,
+      "mae": 51.55487091688035,
+      "rmse": 82.71803556876623
+    },
+    {
+      "model": "mask_025",
+      "outage_hours": 3,
+      "n": 2208,
+      "mae": 54.16080193632055,
+      "rmse": 87.02511463538424
+    },
+    {
+      "model": "mask_025",
+      "outage_hours": 6,
+      "n": 2208,
+      "mae": 53.93815704397271,
+      "rmse": 87.09935882977106
+    },
+    {
+      "model": "mask_050",
+      "outage_hours": 0,
+      "n": 2208,
+      "mae": 37.94700450521587,
+      "rmse": 59.74169303133121
+    },
+    {
+      "model": "mask_050",
+      "outage_hours": 1,
+      "n": 2208,
+      "mae": 48.92953306636586,
+      "rmse": 78.97180720831551
+    },
+    {
+      "model": "mask_050",
+      "outage_hours": 3,
+      "n": 2208,
+      "mae": 51.54075976913478,
+      "rmse": 83.36746379991307
+    },
+    {
+      "model": "mask_050",
+      "outage_hours": 6,
+      "n": 2208,
+      "mae": 51.51244507143007,
+      "rmse": 83.30619854079563
+    },
+    {
+      "model": "mask_075",
+      "outage_hours": 0,
+      "n": 2208,
+      "mae": 41.1130293963037,
+      "rmse": 65.53754229694538
+    },
+    {
+      "model": "mask_075",
+      "outage_hours": 1,
+      "n": 2208,
+      "mae": 45.771295053642326,
+      "rmse": 75.49995541975274
+    },
+    {
+      "model": "mask_075",
+      "outage_hours": 3,
+      "n": 2208,
+      "mae": 50.488327821611584,
+      "rmse": 82.08039836948848
+    },
+    {
+      "model": "mask_075",
+      "outage_hours": 6,
+      "n": 2208,
+      "mae": 50.48194817316397,
+      "rmse": 82.07191487120633
+    },
+    {
+      "model": "mask_100",
+      "outage_hours": 0,
+      "n": 2208,
+      "mae": 44.967486023310215,
+      "rmse": 73.82888318469277
+    },
+    {
+      "model": "mask_100",
+      "outage_hours": 1,
+      "n": 2208,
+      "mae": 45.195385605243615,
+      "rmse": 74.16634847523873
+    },
+    {
+      "model": "mask_100",
+      "outage_hours": 3,
+      "n": 2208,
+      "mae": 49.590132211098826,
+      "rmse": 81.01466363941725
+    },
+    {
+      "model": "mask_100",
+      "outage_hours": 6,
+      "n": 2208,
+      "mae": 49.51169515273364,
+      "rmse": 80.82351538086093
+    },
+    {
+      "model": "seasonal_fallback",
+      "outage_hours": 0,
+      "n": 2208,
+      "mae": 55.997735507246375,
+      "rmse": 97.89196342715366
+    },
+    {
+      "model": "seasonal_fallback",
+      "outage_hours": 1,
+      "n": 2208,
+      "mae": 55.997735507246375,
+      "rmse": 97.89196342715366
+    },
+    {
+      "model": "seasonal_fallback",
+      "outage_hours": 3,
+      "n": 2208,
+      "mae": 55.997735507246375,
+      "rmse": 97.89196342715366
+    },
+    {
+      "model": "seasonal_fallback",
+      "outage_hours": 6,
+      "n": 2208,
+      "mae": 55.997735507246375,
+      "rmse": 97.89196342715366
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+    "threads": 2,
+    "observed_native_pools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "prefix": "libopenblas",
+        "version": "0.3.23.dev",
+        "num_threads": 2
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "prefix": "vcomp",
+        "version": null,
+        "num_threads": 2
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "prefix": "libscipy_openblas",
+        "version": "0.3.30",
+        "num_threads": 2
+      }
+    ],
+    "dependencies": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.2",
+      "scikit-learn": "1.4.2",
+      "matplotlib": "3.10.0",
+      "threadpoolctl": "3.6.0"
+    }
+  },
+  "command": "python masking_sweep.py --output experiments/2026-10-13",
+  "source_code_sha256": "a5edf65ef24c2490d27488f2d67e10ac0674d4923ed631a5bf9ffa5c32b02efa",
+  "limitations": [
+    "One previously exposed historical city/quarter; not independent validation.",
+    "Synthetic rolling reporting delays; mask frequencies not measured operational rates.",
+    "One coupled masking draw per recipe/fold; no confidence intervals.",
+    "Established HGB, fixed estimator budget; no production or novel algorithm claim."
+  ]
+}

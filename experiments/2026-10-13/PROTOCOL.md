@@ -1,0 +1,23 @@
+# Configurable missing-history training: preset protocol
+
+Saved 13 October 2026 before running the new training-mixture ablation. This is **exploratory reuse** of the July–September 2012 UCI Bike Sharing benchmark already examined on October 11–12. Previous outcomes motivated the question; this is not fresh independent validation or a claim of a novel algorithm.
+
+Question: what does changing the probability of hiding recent training reports do to undelayed and delayed next-hour forecast errors, under the same rows/features/model budget?
+
+New deliverable: a reusable configurable masking API, validation tests and CLI sweep with actual metrics/predictions for every preset variant. It informs an operations team's training recipe choice; it does not automatically select a production recipe from the exposed test set. No new hosted-app claim.
+
+Data/source, hourly grid, targets, causal features, one-hour horizon and three expanding monthly folds are unchanged from PROTOCOL.md at the repository root. Use only observed targets. Preserve the 165 natural gaps as NaN; do not use current weather, demand components or future targets. Earlier test-month observations may be used only when available at a later rolling origin. Verify the frozen public UCI archive hash.
+
+Preset training-mask probabilities q = 0, 0.25, 0.50, 0.75, 1.00. For each row draw a delay from [0,1,3,6] hours with probabilities [1−q,q/3,q/3,q/3]. Use the same seed per fold, 42/43/44, for all q. Each recipe has one draw per fold; draws are coupled through the same RNG stream but the nonzero delay category can change with q. Do not call these independent mask seeds or inferential replicates. q=0.50 retains the original October 11 recipe exactly.
+
+Replace features, never targets; recompute all affected lags/rolling availability. Keep the same number/order of training rows, columns, estimator seed and 150-iteration HGB settings. Five training recipes per fold plus a separately trained calendar-only baseline: **18 fits** total. Seasonal baseline uses 168h → 24h → train-only median. Two CPU threads; no runtime claim. Evaluate all four homogeneous rolling reporting delays 0/1/3/6h on the same 2,208 observed targets; earlier hidden reports recover at the next appropriate origin, not a permanent outage.
+
+Primary endpoint: pooled MAE in rentals/hour, separately at each test delay. Also save RMSE, per-fold metrics, actual mask counts/fractions, full predictions, model/configuration/data/code hashes, environment and command/stdout. No hyperparameter search, selection of one winning recipe, confidence intervals or significance claim. Benchmark reuse is exploratory even though the grid is fixed before this execution. All costs/failures and all five recipes must be published.
+
+Validation: original causal/numerical checks; q endpoints; invalid/nonfinite q, seeds and indices; unchanged targets/order/inputs; deterministic draws; q=0.50 exact legacy feature/count parity; changing future or hidden reports cannot contaminate affected rows; every model uses identical evaluation timestamps and strict train-before-test ordering. Compare the newly fitted q=0 and q=0.50 forecasts to their archived originals and report maximum numerical differences without silently replacing old results. No check is allowed to demand an improvement in forecast accuracy.
+
+Visual output: an honest technical table/plot with measured values and a short silent workflow MP4. Animation stages show schematic input masking, causal feature rebuild, matched estimator fits and the actual results. Label the schematic as schematic, not live telemetry or measured timings. Inspect first/middle/last frames, numeric labels, playback/duration, encoding and a static scientific fallback. Titles/hooks/interpretation stay in LinkedIn prose. No owner branding or promotional cover.
+
+Limits: one already exposed city/quarter; synthetic reporting delays shorter than 24h; one coupled mask draw per fold; original natural gaps remain; no prospective validation, deployment evidence or scientific-novelty claim. Article integration and other cities remain future work.
+
+Environment repair before training: the original threadpoolctl 2.2.0 crashed while inspecting a native library with the currently installed Windows/SciPy environment, before any fit occurred. The new sweep uses threadpoolctl 3.6.0 through requirements-sweep.txt; original recorded requirements and outputs stay intact. Numerical/configuration pins are otherwise unchanged. Native thread limits will be checked and recorded; archived forecast parity will be reported. The failed attempt yielded no model results and did not change the recipe grid or hypothesis.

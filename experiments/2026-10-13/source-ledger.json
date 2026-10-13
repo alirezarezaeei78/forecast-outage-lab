@@ -1,0 +1,40 @@
+[
+  {
+    "url": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+    "checked": "2026-10-13",
+    "section": "Description, citation and License",
+    "claim": "Historical aggregate hourly count dataset; CC BY 4.0",
+    "caveat": "Frozen archive/file hashes recorded; natural gaps preserved; one previously exposed quarter."
+  },
+  {
+    "url": "https://scikit-learn.org/1.4/modules/ensemble.html#histogram-based-gradient-boosting",
+    "checked": "2026-10-13",
+    "version": "1.4.2",
+    "section": "Usage, missing-value support, loss, iterations and parallelism",
+    "claim": "Established HGB accepts missing inputs; Poisson regression and iterative tree budgets supported",
+    "caveat": "No source performance scores used; NaN support is not a resilience guarantee."
+  },
+  {
+    "url": "https://pypi.org/project/threadpoolctl/3.6.0/",
+    "checked": "2026-10-13",
+    "version": "3.6.0",
+    "section": "Thread pool introspection and limits",
+    "claim": "Used for native thread control; sanitized observations of two threads recorded",
+    "caveat": "Initial 2.2.0 attempt failed before fitting; no runtime comparisons claimed."
+  },
+  {
+    "url": "https://pypi.org/project/imageio-ffmpeg/0.6.0/",
+    "checked": "2026-10-13",
+    "version": "0.6.0",
+    "section": "Video encode/decode interface",
+    "claim": "Optional MP4 renderer dependency",
+    "caveat": "Binary is not bundled into GitHub; original silent technical animation only."
+  },
+  {
+    "url": "local:experiments/2026-10-13/results.json",
+    "checked": "2026-10-13",
+    "section": "pooled_metrics, fold_details, checks and original_forecast_parity",
+    "claim": "All numerical claims derive from newly executed local fits and actual outputs",
+    "caveat": "Exploratory benchmark reuse, one coupled masking draw per fold, no independent validation or novel-method claim."
+  }
+]

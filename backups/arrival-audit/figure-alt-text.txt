@@ -1,0 +1,1 @@
+Synthetic report-arrival correctness audit over 120 hourly origins with seed 77 and 0–6-hour arrival delays. Ignoring arrival time selected an unavailable report at 102 origins; requiring availability did so at zero. The availability-aware selector had zero missing outputs in this draw. No forecast model was trained; this does not measure predictive accuracy or business impact.

@@ -1,0 +1,25 @@
+Fold 1, q=0.00: fitted on 12842 rows; test 744
+Fold 1, q=0.25: fitted on 12842 rows; test 744
+Fold 1, q=0.50: fitted on 12842 rows; test 744
+Fold 1, q=0.75: fitted on 12842 rows; test 744
+Fold 1, q=1.00: fitted on 12842 rows; test 744
+Fold 2, q=0.00: fitted on 13586 rows; test 744
+Fold 2, q=0.25: fitted on 13586 rows; test 744
+Fold 2, q=0.50: fitted on 13586 rows; test 744
+Fold 2, q=0.75: fitted on 13586 rows; test 744
+Fold 2, q=1.00: fitted on 13586 rows; test 744
+Fold 3, q=0.00: fitted on 14330 rows; test 720
+Fold 3, q=0.25: fitted on 14330 rows; test 720
+Fold 3, q=0.50: fitted on 14330 rows; test 720
+Fold 3, q=0.75: fitted on 14330 rows; test 720
+Fold 3, q=1.00: fitted on 14330 rows; test 720
+outage_hours               0           1           3           6
+model
+calendar_hgb       51.456577   51.456577   51.456577   51.456577
+mask_000           31.783045  260.656079  259.947165  260.114711
+mask_025           35.288323   51.554871   54.160802   53.938157
+mask_050           37.947005   48.929533   51.540760   51.512445
+mask_075           41.113029   45.771295   50.488328   50.481948
+mask_100           44.967486   45.195386   49.590132   49.511695
+seasonal_fallback  55.997736   55.997736   55.997736   55.997736
+Checks passed: 24; fits: 18

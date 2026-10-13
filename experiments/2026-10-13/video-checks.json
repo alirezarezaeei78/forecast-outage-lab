@@ -1,0 +1,23 @@
+{
+  "file": "masking-workflow.mp4",
+  "sha256": "13a4ece18a3d5c1f1612dc7eb99d8b2236faa212cb44f78438f71095575f3057",
+  "width": 1080,
+  "height": 1080,
+  "fps": 12,
+  "decoded_frames": 240,
+  "duration_seconds": 20.0,
+  "codec": "h264",
+  "silent": true,
+  "type": "Schematic technical workflow plus actual measured result table; presentation speed is not measured latency",
+  "first_middle_last_frames": [
+    "workflow-frame-000.png",
+    "workflow-frame-120.png",
+    "workflow-frame-239.png"
+  ],
+  "all_frames_decoded": true,
+  "numerical_source": "metrics.csv",
+  "renderer_version": "0.6.0",
+  "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+  "browser_playback_check": "Unavailable: connected Chrome absent; full decode verified. Publisher must inspect native uploaded video.",
+  "command": "python render_masking_workflow.py --directory experiments/2026-10-13"
+}

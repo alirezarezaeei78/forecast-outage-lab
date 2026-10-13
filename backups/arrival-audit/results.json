@@ -1,0 +1,39 @@
+{
+  "executed_at": "2026-10-13T13:49:22.332611+00:00",
+  "synthetic": true,
+  "seed": 77,
+  "origins": 120,
+  "naive_unavailable": 102,
+  "safe_unavailable": 0,
+  "safe_no_report": 0,
+  "checks": {
+    "passed": 9,
+    "checks": [
+      "Event-known but unarrived reports excluded",
+      "Exact arrival-time boundary is included",
+      "Late arrival of older event cannot roll back newest event",
+      "Newest available correction selected within latest event",
+      "Before history and empty inputs return no invented report",
+      "Unarrived/future values cannot alter available selection",
+      "Input objects are unchanged",
+      "Missing schema, duplicate revision, invalid clock and NaN rejected",
+      "Naive and missing origin rejected"
+    ]
+  },
+  "model_fits": 0,
+  "input_sha256": "de155b44f2ad4cd2e21aefc02b91495382d59ee8bbf9fe1368947d9252c0d712",
+  "environment": {
+    "python": "3.12.14",
+    "pandas": "2.2.2",
+    "numpy": "1.26.4"
+  },
+  "command": "python arrival_audit.py --output backups/arrival-audit",
+  "status": "Verified unused backup; not posted to LinkedIn",
+  "limits": [
+    "Synthetic counts/delays; no business data or forecast model evaluation.",
+    "Timezone-aware reports and trustworthy arrival clocks required.",
+    "In-memory correctness reference; no speed claim or distributed ingestion validation."
+  ],
+  "input_sha256_before_text_normalization": "2772e876d7deccd8c104a6ac47dcf293e6da4c7199eb7b77d6cf1fc2c2b5e31e",
+  "archive_text_normalized_to": "LF"
+}

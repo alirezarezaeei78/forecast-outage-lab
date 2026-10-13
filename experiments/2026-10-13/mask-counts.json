@@ -1,0 +1,287 @@
+[
+  {
+    "fold":1,
+    "mask_probability":0.0,
+    "mask_seed":42,
+    "train_rows":12842,
+    "test_rows":744,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-06-30 23:00:00",
+    "test_start":"2012-07-01",
+    "test_end_exclusive":"2012-08-01",
+    "mask_counts":{
+      "0":12842,
+      "1":0,
+      "3":0,
+      "6":0
+    },
+    "actual_mask_fraction":0.0,
+    "iterations":150
+  },
+  {
+    "fold":1,
+    "mask_probability":0.25,
+    "mask_seed":42,
+    "train_rows":12842,
+    "test_rows":744,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-06-30 23:00:00",
+    "test_start":"2012-07-01",
+    "test_end_exclusive":"2012-08-01",
+    "mask_counts":{
+      "0":9713,
+      "1":1036,
+      "3":1042,
+      "6":1051
+    },
+    "actual_mask_fraction":0.2436536365,
+    "iterations":150
+  },
+  {
+    "fold":1,
+    "mask_probability":0.5,
+    "mask_seed":42,
+    "train_rows":12842,
+    "test_rows":744,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-06-30 23:00:00",
+    "test_start":"2012-07-01",
+    "test_end_exclusive":"2012-08-01",
+    "mask_counts":{
+      "0":6431,
+      "1":2199,
+      "3":2119,
+      "6":2093
+    },
+    "actual_mask_fraction":0.4992213051,
+    "iterations":150
+  },
+  {
+    "fold":1,
+    "mask_probability":0.75,
+    "mask_seed":42,
+    "train_rows":12842,
+    "test_rows":744,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-06-30 23:00:00",
+    "test_start":"2012-07-01",
+    "test_end_exclusive":"2012-08-01",
+    "mask_counts":{
+      "0":3271,
+      "1":3160,
+      "3":3282,
+      "6":3129
+    },
+    "actual_mask_fraction":0.7452888958,
+    "iterations":150
+  },
+  {
+    "fold":1,
+    "mask_probability":1.0,
+    "mask_seed":42,
+    "train_rows":12842,
+    "test_rows":744,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-06-30 23:00:00",
+    "test_start":"2012-07-01",
+    "test_end_exclusive":"2012-08-01",
+    "mask_counts":{
+      "0":0,
+      "1":4336,
+      "3":4294,
+      "6":4212
+    },
+    "actual_mask_fraction":1.0,
+    "iterations":150
+  },
+  {
+    "fold":2,
+    "mask_probability":0.0,
+    "mask_seed":43,
+    "train_rows":13586,
+    "test_rows":744,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-07-31 23:00:00",
+    "test_start":"2012-08-01",
+    "test_end_exclusive":"2012-09-01",
+    "mask_counts":{
+      "0":13586,
+      "1":0,
+      "3":0,
+      "6":0
+    },
+    "actual_mask_fraction":0.0,
+    "iterations":150
+  },
+  {
+    "fold":2,
+    "mask_probability":0.25,
+    "mask_seed":43,
+    "train_rows":13586,
+    "test_rows":744,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-07-31 23:00:00",
+    "test_start":"2012-08-01",
+    "test_end_exclusive":"2012-09-01",
+    "mask_counts":{
+      "0":10164,
+      "1":1117,
+      "3":1152,
+      "6":1153
+    },
+    "actual_mask_fraction":0.2518769321,
+    "iterations":150
+  },
+  {
+    "fold":2,
+    "mask_probability":0.5,
+    "mask_seed":43,
+    "train_rows":13586,
+    "test_rows":744,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-07-31 23:00:00",
+    "test_start":"2012-08-01",
+    "test_end_exclusive":"2012-09-01",
+    "mask_counts":{
+      "0":6727,
+      "1":2320,
+      "3":2234,
+      "6":2305
+    },
+    "actual_mask_fraction":0.504857942,
+    "iterations":150
+  },
+  {
+    "fold":2,
+    "mask_probability":0.75,
+    "mask_seed":43,
+    "train_rows":13586,
+    "test_rows":744,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-07-31 23:00:00",
+    "test_start":"2012-08-01",
+    "test_end_exclusive":"2012-09-01",
+    "mask_counts":{
+      "0":3397,
+      "1":3330,
+      "3":3437,
+      "6":3422
+    },
+    "actual_mask_fraction":0.7499631974,
+    "iterations":150
+  },
+  {
+    "fold":2,
+    "mask_probability":1.0,
+    "mask_seed":43,
+    "train_rows":13586,
+    "test_rows":744,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-07-31 23:00:00",
+    "test_start":"2012-08-01",
+    "test_end_exclusive":"2012-09-01",
+    "mask_counts":{
+      "0":0,
+      "1":4468,
+      "3":4579,
+      "6":4539
+    },
+    "actual_mask_fraction":1.0,
+    "iterations":150
+  },
+  {
+    "fold":3,
+    "mask_probability":0.0,
+    "mask_seed":44,
+    "train_rows":14330,
+    "test_rows":720,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-08-31 23:00:00",
+    "test_start":"2012-09-01",
+    "test_end_exclusive":"2012-10-01",
+    "mask_counts":{
+      "0":14330,
+      "1":0,
+      "3":0,
+      "6":0
+    },
+    "actual_mask_fraction":0.0,
+    "iterations":150
+  },
+  {
+    "fold":3,
+    "mask_probability":0.25,
+    "mask_seed":44,
+    "train_rows":14330,
+    "test_rows":720,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-08-31 23:00:00",
+    "test_start":"2012-09-01",
+    "test_end_exclusive":"2012-10-01",
+    "mask_counts":{
+      "0":10788,
+      "1":1162,
+      "3":1200,
+      "6":1180
+    },
+    "actual_mask_fraction":0.2471737613,
+    "iterations":150
+  },
+  {
+    "fold":3,
+    "mask_probability":0.5,
+    "mask_seed":44,
+    "train_rows":14330,
+    "test_rows":720,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-08-31 23:00:00",
+    "test_start":"2012-09-01",
+    "test_end_exclusive":"2012-10-01",
+    "mask_counts":{
+      "0":7219,
+      "1":2352,
+      "3":2379,
+      "6":2380
+    },
+    "actual_mask_fraction":0.4962316818,
+    "iterations":150
+  },
+  {
+    "fold":3,
+    "mask_probability":0.75,
+    "mask_seed":44,
+    "train_rows":14330,
+    "test_rows":720,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-08-31 23:00:00",
+    "test_start":"2012-09-01",
+    "test_end_exclusive":"2012-10-01",
+    "mask_counts":{
+      "0":3623,
+      "1":3596,
+      "3":3569,
+      "6":3542
+    },
+    "actual_mask_fraction":0.7471737613,
+    "iterations":150
+  },
+  {
+    "fold":3,
+    "mask_probability":1.0,
+    "mask_seed":44,
+    "train_rows":14330,
+    "test_rows":720,
+    "train_start":"2011-01-08 00:00:00",
+    "train_end":"2012-08-31 23:00:00",
+    "test_start":"2012-09-01",
+    "test_end_exclusive":"2012-10-01",
+    "mask_counts":{
+      "0":0,
+      "1":4847,
+      "3":4724,
+      "6":4759
+    },
+    "actual_mask_fraction":1.0,
+    "iterations":150
+  }
+]
